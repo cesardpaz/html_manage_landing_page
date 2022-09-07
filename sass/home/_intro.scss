@@ -1,0 +1,203 @@
+@use '../base/variables' as v;
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & > div {
+        width: 100%;
+        @media screen and (min-width:991px) {
+            width: 50%;
+            &:first-child{
+                padding-right: 4rem;
+            }
+            &:last-child{
+                padding-left: 4rem;
+            }
+        }
+    }
+    p {
+        color: v.$dgblue;
+        margin-top: 3rem;
+        line-height: 2.5rem;
+    }
+
+}
+.btn-intro {
+    text-align: center;
+    @media screen and (min-width:991px) {
+        text-align: left;
+    }
+}
+.main-intro {
+    padding: 10rem 0;
+    align-items: center;
+    h2 {
+        font-size: 4.4rem;
+        line-height: 5.4rem;
+        color: v.$dblue;
+        text-align: center;
+        @media screen and (min-width:991px) {
+            text-align: left;
+            font-size: 5.4rem;
+            line-height: 6rem;
+        }
+    }
+    p{
+        text-align: center;
+        @media screen and (min-width:991px) {
+            text-align: left;
+        }
+    }
+}
+.main-intro-l {
+    order: 1;
+}
+.main-intro-r {
+    order: 0;
+    @media screen and (min-width:991px) {
+        order: 2;
+    }
+    figure {
+        text-align: center;
+        img{
+            max-width: 100%;
+        }
+        @media screen and (min-width:991px) {
+            text-align: right;
+        }
+    }
+}
+.main-info {
+    padding: 2rem 0;
+    position: relative;
+    h3 {
+        font-size: 3rem;
+        line-height: 3.7rem;
+        color: v.$dblue;
+        text-align: center;
+        @media screen and (min-width:991px) {
+            font-size: 4rem;
+            line-height: 4.7rem;
+            text-align: left;
+        }
+    }
+    p{
+        text-align: center;
+        @media screen and (min-width:991px) {
+            text-align: left;
+        }
+    }
+
+    .main-info-title {
+        margin-bottom: 5rem;
+        @media screen and (min-width:991px) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.item-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .number {
+        background-color: v.$bred;
+        color: v.$vlgray;
+        width: 50px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        font-size: 1.2rem;
+    }
+    .desc {
+        width: calc(100% - 50px);
+        padding-left: 1rem;
+
+        @media screen and (min-width:991px) {
+            padding-left: 3rem;
+        }
+        h4 {
+            color: v.$dblue;
+            margin-top: .5rem;
+        }
+        p{
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+    }
+}
+
+.comments {
+    position: relative;
+    padding: 10rem 0;
+    h2 {
+        font-size: 4rem;
+        color: v.$dblue;
+        line-height: 4.7rem;
+        text-align: center;
+    }
+}
+
+.pattern-main {
+    position: absolute;
+    top: -50%;
+    left: -450px;
+    z-index: -1;
+}
+
+.grid-comment {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin-top: 8rem;
+
+    @media screen and (min-width:991px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .item-comment{
+        background-color: v.$vlgray;
+        position: relative;
+    }
+}
+
+.user {
+
+    figure{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    img{
+        width: 50px;
+        height: 50px;
+    }
+    div{
+        padding: 1.6rem 2rem 3rem;
+    }
+    h5 {
+        color: v.$dblue;
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        color: v.$dgblue;
+        margin-top: 2rem;
+        line-height: 2.3rem
+    }
+}
+
+.comment-button {
+    margin-top: 4rem;
+    text-align: center;
+}

@@ -1,0 +1,116 @@
+@use '../base/variables' as v;
+
+footer {
+    background-color: v.$vdblue;
+    padding: 6rem 0;
+    .cnt-footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        ul{
+            li{
+                margin-bottom: 2rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                a{
+                    color: v.$vlgray;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+
+        @media screen and (min-width:991px) {
+            justify-content: flex-end;
+        }
+        input{
+            background-color: v.$vlgray;
+            padding: 1rem 2rem;
+            border-radius: 3rem;
+            border: none;
+            margin-right: .5rem;
+            width: 20rem;
+            &:focus {
+                outline: none;
+            }
+        }
+        button {
+            background-color: v.$bred;
+            padding: 1rem 2rem;
+            border-radius: 3rem;
+            border: none;
+            color: v.$vlgray;
+            font-size: 13px;
+        }
+    }
+
+    .footer-copyright {
+        color: v.$dgblue;
+        font-size: 1.2rem;
+        text-align: right;
+        margin-top: 6rem;
+        display: none;
+        @media screen and (min-width:991px) {
+            display: block;
+        }
+    }
+
+    .social-footer {
+        margin-top: 7rem;
+        a{
+            margin-right: 1rem;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+
+}
+
+.footer_column_1 {
+    display: none;
+    @media screen and (min-width:991px) {
+        display: block;
+        width: 25%;
+    }
+}
+.footer_column_2 {
+    order: 2;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width:991px) {
+        display: block;
+        order: 2;
+        width: 25%;
+    }
+}
+.footer_column_3 {
+    order: 3;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width:991px) {
+        display: block;
+        order: 3;
+        width: 25%;
+    }
+}
+.footer_column_4 {
+    order: 0;
+    width: 100%;
+    margin-bottom: 6rem;
+
+    @media screen and (min-width:991px) {
+        order: 4;
+        width: 25%;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,40 @@
+@use 'variables' as v;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$font;
+    font-size: 1.6rem;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.container{
+    max-width: 1440px;
+    width: 92%;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: v.$bred;
+    font-size: 1.2rem;
+    padding: 1rem 2.4rem;
+    border-radius: 50px;
+    color: v.$vlgray;
+}
+.btn-light {
+    background-color: v.$vlgray;
+    font-size: 1.2rem;
+    padding: 1rem 2.4rem;
+    border-radius: 50px;
+    color: v.$bred;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}

@@ -1,0 +1,37 @@
+@use '../base/variables' as v;
+
+.banner {
+    background-color: v.$bred;
+
+    position: relative;
+    .banner-cnt {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 8rem 0;
+        flex-direction: column;
+
+        @media screen and (min-width:991px) {
+            flex-direction: row;
+        }
+
+        h3 {
+            color: v.$vlgray;
+            font-size: 4rem;
+            line-height: 4.7rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 3rem;
+            @media screen and (min-width:991px) {
+                text-align: left;
+                margin-bottom: 0;
+            }
+        }
+    }
+    figure {
+        position: absolute;
+        bottom: 0;
+        right: -20rem;
+    }
+}

@@ -1,0 +1,56 @@
+@use '../base/variables' as v;
+
+header{
+    margin-top: 40px;
+}
+
+.header-pattern {
+    position: absolute;
+    top: -50rem;
+    right: -50rem;
+    z-index: -1;
+    @media screen and (min-width:991px) {
+        top: -18rem;
+        right: -18rem;
+    }
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav {
+    display: none;
+    ul {
+        display: flex;
+        li {
+            a {
+                color: v.$dblue;
+                font-size: 1.3rem;
+            }
+            margin-right: 2.5rem;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media screen and (min-width:991px) {
+        display: block;
+    }
+}
+
+.btn-header {
+    display: none;
+    @media screen and (min-width:991px) {
+        display: block;
+    }
+}
+.btn-toggle {
+    display: block;
+    @media screen and (min-width:991px) {
+        display: none;
+    }
+}
